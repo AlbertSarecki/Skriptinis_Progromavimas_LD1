@@ -1,0 +1,46 @@
+% ===================================================
+% Autorius: Albert Sarecki
+% Laboratorinis darbas Nr. 1: Darbo MATLAB aplinkoje pagrindai
+% ===================================================
+
+%% 7 UŽDUOTIS: Skripto pavyzdys
+x = 1:32;
+y = x.^2;
+
+figure;
+plot(x, y, 'o-r', x, y/3, 'xb')
+title('Dvi funkcijos')
+xlabel('X-ai')
+ylabel('F_1 [-o-] | F_2 [-x-]')
+
+
+%% 8 UŽDUOTIS: Pagalbos paieška apie sin, plot, title
+% Komandos pagalbai gauti MATLAB aplinkoje:
+% help sin
+% help plot
+% help title
+% doc sin
+
+
+%% 9 UŽDUOTIS: linspace, size, max funkcijų analizė
+
+% --- 1. linspace ---
+% Sintaksė: v = linspace(x1, x2) arba v = linspace(x1, x2, n)
+% Paskirtis: Sugeneruoja n tolygiai išdėstytų taškų tarp x1 ir x2.
+% Įvestis: x1 (pradžia), x2 (pabaiga), n (taškų skaičius, numatytasis n = 100).
+% Išvestis: Eilutės vektorius.
+% Susijusios funkcijos: logspace, colon (:).
+
+% --- 2. size ---
+% Sintaksė: d = size(X) arba [m, n] = size(X)
+% Paskirtis: Grąžina matricos ar masyvo matmenis.
+% Įvestis: Masyvas arba matrica X.
+% Išvestis: Eilučių ir stulpelių skaičius.
+% Susijusios funkcijos: length, ndims, numel.
+
+% --- 3. max ---
+% Sintaksė: M = max(A) arba [M, I] = max(A)
+% Paskirtis: Randa didžiausią elementą.
+% Įvestis: Vektorius arba matrica A.
+% Išvestis: M (didžiausia reikšmė), I (jos indeksas/pozicija).
+% Susijusios funkcijos: min, mean, median, sort.
