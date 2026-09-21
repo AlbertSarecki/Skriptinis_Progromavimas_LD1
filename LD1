@@ -44,3 +44,52 @@ ylabel('F_1 [-o-] | F_2 [-x-]')
 % Įvestis: Vektorius arba matrica A.
 % Išvestis: M (didžiausia reikšmė), I (jos indeksas/pozicija).
 % Susijusios funkcijos: min, mean, median, sort.
+
+
+
+
+
+
+
+%% PAPILDOMA UŽDUOTIS (4 balai)
+
+% 1. Studentų ID paskutinis skaitmuo N
+
+N = 7; 
+
+% 2. Vektorius: nuo N+1 iki N+4 su žingsniu 0.5
+v = (N+1) : 0.5 : (N+4);
+
+% 3. Matrica A (3x3), kurios elementai didėja vienetu nuo N
+A = [N, N+1, N+2; 
+    N+3, N+4, N+5; 
+    N+6, N+7, N+8];
+
+% 4. Žaliai pažymėtų elementų / poaibių atrinkimas:
+% a) Trečios eilutės, antro stulpelio elementas
+elem_a = A(3, 2);
+
+% b) Apačioje kairėje esantis 2x2 sub-matrica (2-3 eilutės, 1-2 stulpeliai)
+sub_b = A(2:3, 1:2);
+
+% c) Matricos kampai (1 ir 3 eilutės, 1 ir 3 stulpeliai)
+sub_c = A([1, 3], [1, 3]);
+
+% 5. Vektoriaus v prijungimas prie matricos A
+% Kadangi A yra 3x3, o v turi 7 elementus (pvz., nuo 6 iki 9 su žingsniu 0.5),
+% imame 3 elementus arba paverčiame v stulpeliu, kad prijungtume kaip 4-ąjį stulpelį:
+v_sub = v(1:3)'; % paimame pirmuosius 3 elementus ir paverčiame stulpeliu
+A_nauja = [A, v_sub]; % prijungiame kaip naują stulpelį (3x4 matrica)
+
+
+% Parodome rezultatus komandų lange:
+disp('Matrica A:');
+disp(A);
+disp('Elementas a:');
+disp(elem_a);
+disp('Sub-matrica b:');
+disp(sub_b);
+disp('Kampai c:');
+disp(sub_c);
+disp('Matrica A su prijungtu vektoriumi:');
+disp(A_nauja);
